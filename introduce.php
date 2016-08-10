@@ -1,6 +1,7 @@
 <?php
 /**
 * Plugin Name: Introduce Plugin
+* Plugin URI: https://github.com/mrinal013/introduce-cpt/
 * Author: mrinal013
 * Author URI: https://github.com/mrinal013
 * Description: This is required plugin for Introduce Theme
