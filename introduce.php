@@ -5,7 +5,7 @@
 * GitHub Plugin URI: https://github.com/mrinal013/introduce-cpt/
 */
 
-// test comments
+// comments
 
 //create section post type
 function introduce_section_post_types() {
