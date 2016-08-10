@@ -5,7 +5,7 @@
 * Author: mrinal013
 * Author URI: https://github.com/mrinal013
 * Description: This is required plugin for Introduce Theme
-* Version: 1.0.0
+* Version: 1.0.1
 * 
 */
 
