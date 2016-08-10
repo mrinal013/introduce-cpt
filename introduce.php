@@ -2,6 +2,7 @@
 /**
 * Plugin Name: Introduce Plugin
 * Description: This is required plugin for Introduce Theme
+* GitHub Plugin URI: https://github.com/mrinal013/introduce-cpt/
 */
 
 //create section post type
