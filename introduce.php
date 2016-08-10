@@ -6,7 +6,7 @@
 * Author URI: https://github.com/mrinal013
 * Description: This is required plugin for Introduce Theme
 * Version: 1.0.0
-* GitHub Plugin URI: https://github.com/mrinal013/introduce-cpt/
+* 
 */
 
 // comments
