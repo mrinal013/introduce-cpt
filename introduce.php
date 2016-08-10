@@ -1,7 +1,10 @@
 <?php
 /**
 * Plugin Name: Introduce Plugin
+* Author: mrinal013
+* Author URI: https://github.com/mrinal013
 * Description: This is required plugin for Introduce Theme
+* Version: 1.0.0
 * GitHub Plugin URI: https://github.com/mrinal013/introduce-cpt/
 */
 
@@ -72,3 +75,12 @@ function introduce_section_post_types() {
 }
 
 add_action( 'init', 'introduce_section_post_types' );
+
+
+require 'plugin-update-checker/plugin-update-checker.php';
+$className = PucFactory::getLatestClassVersion('PucGitHubChecker');
+$myUpdateChecker = new $className(
+    'https://github.com/mrinal013/introduce-cpt/',
+    __FILE__,
+    'master'
+);
