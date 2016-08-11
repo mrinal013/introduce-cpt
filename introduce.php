@@ -1,14 +1,26 @@
 <?php
 /**
+<<<<<<< HEAD
 * Plugin Name: Introduce CPT Plugin
+=======
+* Plugin Name: Introduce Plugin
+>>>>>>> 398426a9a2b7e7f4beeba89dcef69da078385ff5
 * Plugin URI: https://github.com/mrinal013/introduce-cpt/
 * Author: mrinal013
 * Author URI: https://github.com/mrinal013
 * Description: This is required plugin for Introduce Theme
 * Version: 1.0.1
+<<<<<<< HEAD
 *
 */
 
+=======
+* 
+*/
+
+// comments
+
+>>>>>>> 398426a9a2b7e7f4beeba89dcef69da078385ff5
 //create section post type
 function introduce_section_post_types() {
     $types = array(
@@ -31,8 +43,14 @@ function introduce_section_post_types() {
             'menu_title'    => 'Portfolio',
             'plural'        => 'Portfolioes',
             'singular'      => 'Portfolio',
+<<<<<<< HEAD
             'supports'      => array( 'title', 'editor', 'thumbnail', 'tags' ),
             'slug'          => 'portfolio',
+=======
+            'supports'      => array( 'title', 'editor', 'thumbnail' ),
+            'slug'          => 'portfolio',
+            //'taxonomies' => array('category', 'post_tag'),
+>>>>>>> 398426a9a2b7e7f4beeba89dcef69da078385ff5
         ),
     );
     $counter = 0;
