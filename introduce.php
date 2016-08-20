@@ -97,7 +97,12 @@ function create_book_tax() {
 /**
 * Codestar framework include
 */
-require ( plugin_dir_path( __FILE__ ). "/codestar/cs-framework.php" );
+require ( plugin_dir_path( __FILE__ ) . "/codestar/cs-framework.php" );
+
+/*
+* metaboxes for introduce theme
+*/
+require ( plugin_dir_path( __FILE__ ) . "/metaboxes/metaboxes.php" );
 
 
 require 'plugin-update-checker/plugin-update-checker.php';
