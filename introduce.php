@@ -1,15 +1,16 @@
 <?php
 /**
-* Plugin Name: Introduce Plugin
+* Plugin Name: Introduce Custom Post Types & Metaboxes
 * Plugin URI: https://github.com/mrinal013/introduce-cpt/
 * Author: mrinal013
 * Author URI: https://github.com/mrinal013
 * Description: This is required plugin for Introduce theme
 * Version: 1.0.0
-*
+* License: GPLv3
+* Text Domain: introduce-cpt
 */
 
-
+defined ('ABSPATH') or die("Direct Access is not allowed");
 //create section post type
 function introduce_section_post_types() {
     $types = array(
@@ -85,7 +86,7 @@ function create_book_tax() {
 		'portfoio_type',
 		'portfolio',
 		array(
-			'label' => __( 'Type' ),
+			'label' => __( 'Type', 'introduce-cpt' ),
 			'rewrite' => array( 'slug' => 'portfoio_type' ),
 			'hierarchical' => false,
             'update_count_callback' => '_update_post_term_count',
