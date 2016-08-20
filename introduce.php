@@ -1,12 +1,11 @@
 <?php
 /**
-* Plugin Name: Introduce CPT Plugin
 * Plugin Name: Introduce Plugin
 * Plugin URI: https://github.com/mrinal013/introduce-cpt/
 * Author: mrinal013
 * Author URI: https://github.com/mrinal013
-* Description: This is required plugin for Introduce Theme
-* Version: 1.0.1
+* Description: This is required plugin for Introduce theme
+* Version: 1.0.0
 *
 */
 
@@ -67,8 +66,6 @@ function introduce_section_post_types() {
                 'supports'          => $arg['supports'],
                 'rewrite'           => array( 'slug' => $arg['slug'] ),
                 'menu_position'     => ( 20 + $counter ),
-                //'taxonomies' => $arg['taxonomies'],
-
             )
         );
 
@@ -77,6 +74,29 @@ function introduce_section_post_types() {
 }
 
 add_action( 'init', 'introduce_section_post_types' );
+
+/*
+* Register a tag box in portfolio cpt
+*/
+add_action( 'init', 'create_book_tax' );
+
+function create_book_tax() {
+	register_taxonomy(
+		'portfoio_type',
+		'portfolio',
+		array(
+			'label' => __( 'Type' ),
+			'rewrite' => array( 'slug' => 'portfoio_type' ),
+			'hierarchical' => false,
+            'update_count_callback' => '_update_post_term_count',
+		)
+	);
+}
+
+/**
+* Codestar framework include
+*/
+require ( plugin_dir_path( __FILE__ ). "/codestar/cs-framework.php" );
 
 
 require 'plugin-update-checker/plugin-update-checker.php';
