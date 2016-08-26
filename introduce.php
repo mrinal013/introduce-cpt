@@ -50,7 +50,7 @@ function introduce_section_post_types() {
             'edit_item'             => 'Edit ' . strtolower( $arg['singular'] ),
             'new_item'              => 'New ' . strtolower( $arg['singular'] ),
             'all_items'             => 'All ' . strtolower( $arg['plural'] ),
-            'view_item'             => 'View ' . strtolower( $arg['plural'] ),
+            'view_item'             => 'View ' . strtolower( $arg['menu_title'] ),
             'search_items'          => 'Search ' . strtolower( $arg['plural'] ),
             'not_found'             => 'No ' . strtolower( $arg['plural'] ) . ' found',
             'not_found_in_trash'    => 'No ' . strtolower( $arg['plural'] ) . ' found in Trash',
@@ -92,6 +92,29 @@ function create_book_tax() {
             'update_count_callback' => '_update_post_term_count',
 		)
 	);
+}
+
+add_action( 'admin_print_scripts-post-new.php', 'section_admin_script', 11 );
+add_action( 'admin_print_scripts-post.php', 'section_admin_script', 11 );
+
+function section_admin_script() {
+    global $post_type;
+    if( 'section' == $post_type )
+    wp_enqueue_script( 'section_admin_script', plugins_url('/js/section.js', __FILE__ ), array('jquery'), '', true );
+}
+
+add_action('admin_head', 'wpds_custom_admin_post_css');
+function wpds_custom_admin_post_css() {
+
+    global $post_type;
+
+    if ($post_type == 'section') {
+        echo "<style>#edit-slug-box {display:none;}</style>";
+    } else if ($post_type == 'service') {
+        echo "<style>#edit-slug-box {display:none;}</style>";
+    } else if ($post_type == 'portfolio') {
+        echo "<style>#edit-slug-box {display:none;}</style>";
+    }
 }
 
 /**
